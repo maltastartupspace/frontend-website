@@ -69,8 +69,23 @@ Configured for autoscale deployment with http-server serving static files.
   - Integrated WhatsApp CTAs throughout
   - Set up deployment configuration
 
+## Authentication System
+- Users must login before accessing WhatsApp join link
+- Login collects: Name, Email, Company (optional), Website (optional)
+- User data stored in PostgreSQL database
+- Session-based authentication with 30-day cookie lifetime
+- Protected `/join` page shows WhatsApp link only to authenticated users
+
+### To Update WhatsApp Link:
+Edit `server.js` line 159:
+```javascript
+const whatsappLink = 'https://chat.whatsapp.com/YOUR_GROUP_INVITE_CODE';
+```
+Replace `YOUR_GROUP_INVITE_CODE` with your actual WhatsApp group invite code.
+
 ## Notes
-- WhatsApp links need actual group invite URL
-- Placeholder testimonials ready for real content
-- Images use SVG placeholders pending real photos
-- Email links use placeholder contact address
+- Update WhatsApp group invite link in server.js (line 159)
+- All "Join WhatsApp" buttons redirect to login page
+- User data is securely stored in PostgreSQL
+- Passwords are hashed with bcrypt
+- Returning users can login with their existing credentials
