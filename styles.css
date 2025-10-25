@@ -206,6 +206,7 @@ a {
     text-align: center;
     color: var(--startup-white);
     padding: var(--spacing-xl);
+    padding-bottom: calc(var(--spacing-xl) * 2);
     max-width: 1000px;
     animation: fadeInUp 1s ease;
 }
@@ -276,10 +277,7 @@ a {
     display: flex;
     gap: var(--spacing-lg);
     justify-content: center;
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: var(--spacing-xxl);
 }
 
 .stat-card {
