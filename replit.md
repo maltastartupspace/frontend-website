@@ -51,10 +51,10 @@ The frontend website for maltastartupspace.com - Malta's premier startup ecosyst
 - Tablet breakpoint: 1024px
 
 ## Deployment
-Configured for autoscale deployment with http-server serving static files.
+Configured for autoscale deployment with Node.js Express server handling both static files and API endpoints.
 
 ## Recent Changes
-- **2025-10-25**: Dark mode theme implementation
+- **2025-10-25**: Dark mode theme implementation & production fixes
   - Updated hero section with black overlay (70% opacity)
   - Changed footer to pure black (#000000)
   - Updated stat cards to sleek black with slate silver grey borders
@@ -65,9 +65,13 @@ Configured for autoscale deployment with http-server serving static files.
   - Implemented 8-section layout with brand copy
   - Added visual identity system (colors, typography)
   - Created responsive design with mobile optimization
+  - Fixed mobile stat cards display (all 3 tiles now visible)
   - Added animations and micro-interactions
   - Integrated WhatsApp CTAs throughout
-  - Set up deployment configuration
+  - Fixed production deployment to run Express server (not static files)
+  - Added trust proxy setting for Replit deployment
+  - Updated CORS configuration for production
+  - Set secure cookies for production environment
 
 ## Authentication System
 - Users must submit their details before accessing WhatsApp join link
