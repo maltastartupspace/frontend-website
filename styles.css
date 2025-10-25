@@ -189,6 +189,7 @@ a {
     background-position: center;
     background-attachment: fixed;
     overflow: hidden;
+    margin-bottom: var(--spacing-xxl);
 }
 
 .hero-overlay {
@@ -275,10 +276,14 @@ a {
     display: flex;
     gap: var(--spacing-lg);
     justify-content: center;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .stat-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(10, 36, 99, 0.8);
     backdrop-filter: blur(10px);
     padding: var(--spacing-md);
     border-radius: 8px;
@@ -286,6 +291,8 @@ a {
     flex-direction: column;
     align-items: center;
     min-width: 150px;
+    border: 1px solid rgba(212, 165, 116, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .stat-number {
@@ -302,8 +309,10 @@ a {
 
 /* ===== Malta Advantage Section ===== */
 .malta-advantage {
-    padding: var(--spacing-xxl) 0;
+    padding: calc(var(--spacing-xxl) * 1.5) 0 var(--spacing-xxl);
     background-color: var(--startup-white);
+    position: relative;
+    z-index: 1;
 }
 
 .advantage-grid {
