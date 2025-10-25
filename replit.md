@@ -76,16 +76,19 @@ Configured for autoscale deployment with http-server serving static files.
 - Session-based authentication with 30-day cookie lifetime
 - Protected `/join` page shows WhatsApp link only to authenticated users
 
-### To Update WhatsApp Link:
-Edit `server.js` line 159:
-```javascript
-const whatsappLink = 'https://chat.whatsapp.com/YOUR_GROUP_INVITE_CODE';
-```
-Replace `YOUR_GROUP_INVITE_CODE` with your actual WhatsApp group invite code.
+### WhatsApp Community:
+- **Link**: https://chat.whatsapp.com/HSgdX3T1jH4AIhuoo9VrVb
+- **QR Code**: whatsapp-qr.png (displayed on /join page after login)
+
+### Social Media Links:
+- **Instagram**: https://www.instagram.com/maltastartupspace/
+- **Facebook Group**: https://www.facebook.com/groups/maltastartupspace/
+- **Facebook Page**: https://www.facebook.com/malta.startup.space
+- **LinkedIn**: https://www.linkedin.com/company/maltastartupspace
 
 ## Notes
-- Update WhatsApp group invite link in server.js (line 159)
 - All "Join WhatsApp" buttons redirect to login page
 - User data is securely stored in PostgreSQL
 - Passwords are hashed with bcrypt
 - Returning users can login with their existing credentials
+- WhatsApp link is configured in server.js (line 188)

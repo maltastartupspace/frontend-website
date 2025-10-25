@@ -182,8 +182,7 @@ app.get('/api/auth/user', isAuthenticated, async (req, res) => {
 
 // Get WhatsApp link (protected)
 app.get('/api/whatsapp-link', isAuthenticated, (req, res) => {
-  // Replace with your actual WhatsApp group invite link
-  const whatsappLink = 'https://chat.whatsapp.com/YOUR_GROUP_INVITE_CODE';
+  const whatsappLink = 'https://chat.whatsapp.com/HSgdX3T1jH4AIhuoo9VrVb';
   res.json({ link: whatsappLink });
 });
 
