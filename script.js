@@ -69,6 +69,56 @@ const observer = new IntersectionObserver((entries) => {
 
 // Apply animations to elements
 document.addEventListener('DOMContentLoaded', () => {
+    // Particle Animation
+    function createParticles() {
+        const container = document.getElementById('particles');
+        if (!container) return;
+        
+        const icons = ['🚀', '⭐', '⚡', '📈', '💡'];
+        const classNames = ['rocket', 'star', 'lightning', 'chart', 'bulb'];
+        
+        // Create 15 particles
+        for (let i = 0; i < 15; i++) {
+            setTimeout(() => {
+                const particle = document.createElement('div');
+                const iconIndex = Math.floor(Math.random() * icons.length);
+                
+                particle.className = `particle ${classNames[iconIndex]}`;
+                particle.textContent = icons[iconIndex];
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.fontSize = (15 + Math.random() * 15) + 'px';
+                
+                container.appendChild(particle);
+                
+                // Remove particle after animation completes
+                setTimeout(() => {
+                    particle.remove();
+                }, 20000);
+            }, i * 1000); // Stagger particle creation
+        }
+        
+        // Create new particles periodically
+        setInterval(() => {
+            const particle = document.createElement('div');
+            const iconIndex = Math.floor(Math.random() * icons.length);
+            
+            particle.className = `particle ${classNames[iconIndex]}`;
+            particle.textContent = icons[iconIndex];
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = '0s';
+            particle.style.fontSize = (15 + Math.random() * 15) + 'px';
+            
+            container.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 20000);
+        }, 2000);
+    }
+    
+    createParticles();
+    
     // Add animation classes to elements
     const animateElements = [
         '.advantage-card',
