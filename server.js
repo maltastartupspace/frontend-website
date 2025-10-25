@@ -50,20 +50,14 @@ async function initDatabase() {
     // Create sessions table for express-session
     await pool.query(`
       CREATE TABLE IF NOT EXISTS "sessions" (
-        "sid" varchar NOT NULL COLLATE "default",
+        "sid" varchar NOT NULL PRIMARY KEY,
         "sess" json NOT NULL,
         "expire" timestamp(6) NOT NULL
-      )
-      WITH (OIDS=FALSE);
+      );
     `);
     
     await pool.query(`
       CREATE INDEX IF NOT EXISTS "IDX_session_expire" ON "sessions" ("expire");
-    `);
-    
-    await pool.query(`
-      ALTER TABLE "sessions" 
-      ADD PRIMARY KEY IF NOT EXISTS ("sid") NOT DEFERRABLE INITIALLY IMMEDIATE;
     `);
 
     // Create users table
