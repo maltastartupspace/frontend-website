@@ -394,6 +394,18 @@ a {
     font-weight: 600;
 }
 
+.community-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.community-image:hover {
+    transform: scale(1.02);
+}
+
 .section-cta {
     text-align: center;
     margin-top: var(--spacing-xxl);
@@ -442,10 +454,30 @@ a {
 
 /* ===== Island Effect Section ===== */
 .island-effect {
+    position: relative;
     padding: var(--spacing-xxl) var(--spacing-md);
     background-color: var(--mediterranean-deep);
     color: var(--startup-white);
     text-align: center;
+    overflow: hidden;
+}
+
+.island-effect-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(10, 36, 99, 0.85), rgba(10, 36, 99, 0.85)), url('event-indoor.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+.island-effect .container {
+    position: relative;
+    z-index: 1;
 }
 
 .island-effect h2 {
