@@ -12,6 +12,13 @@
     --startup-white: #FDFBF7;
     --energy-coral: #FF6B6B;
     
+    /* Dark mode colors */
+    --dark-bg: #0a0a0a;
+    --dark-bg-secondary: #151515;
+    --dark-card: #1a1a1a;
+    --dark-text: #e0e0e0;
+    --dark-text-secondary: #a0a0a0;
+    
     /* Typography */
     --font-primary: 'Montserrat', sans-serif;
     --font-secondary: 'Inter', sans-serif;
@@ -35,14 +42,15 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.6;
-    color: var(--mediterranean-deep);
-    background-color: var(--startup-white);
+    color: var(--dark-text);
+    background-color: var(--dark-bg);
     overflow-x: hidden;
 }
 
 h1, h2, h3 {
     font-family: var(--font-primary);
     line-height: 1.2;
+    color: var(--startup-white);
 }
 
 h1 {
@@ -90,8 +98,9 @@ a {
 .navbar {
     position: sticky;
     top: 0;
-    background: var(--startup-white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     transition: all 0.3s ease;
 }
@@ -125,7 +134,7 @@ a {
 .nav-link {
     font-family: var(--font-primary);
     font-weight: 500;
-    color: var(--mediterranean-deep);
+    color: var(--dark-text);
     position: relative;
 }
 
@@ -308,7 +317,7 @@ a {
 /* ===== Malta Advantage Section ===== */
 .malta-advantage {
     padding: calc(var(--spacing-xxl) * 1.5) 0 var(--spacing-xxl);
-    background-color: var(--startup-white);
+    background-color: var(--dark-bg-secondary);
     position: relative;
     z-index: 1;
 }
@@ -323,12 +332,16 @@ a {
 .advantage-card {
     text-align: center;
     padding: var(--spacing-lg);
+    background: var(--dark-card);
+    border-radius: 8px;
+    border: 1px solid rgba(212, 165, 116, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .advantage-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(212, 165, 116, 0.2);
+    border-color: var(--valletta-gold);
 }
 
 .advantage-icon {
@@ -338,20 +351,20 @@ a {
 }
 
 .advantage-card h3 {
-    color: var(--mediterranean-deep);
+    color: var(--startup-white);
     margin-bottom: var(--spacing-md);
     font-size: 24px;
 }
 
 .advantage-card p {
-    color: #555;
+    color: var(--dark-text-secondary);
     line-height: 1.8;
 }
 
 /* ===== Community to Ecosystem Section ===== */
 .community-ecosystem {
     padding: var(--spacing-xxl) 0;
-    background-color: #f8f9fa;
+    background-color: var(--dark-bg);
 }
 
 .two-column {
@@ -362,7 +375,7 @@ a {
 }
 
 .column h3 {
-    color: var(--mediterranean-deep);
+    color: var(--startup-white);
 }
 
 .feature-list {
@@ -378,7 +391,7 @@ a {
     position: relative;
     padding-left: var(--spacing-md);
     margin-bottom: var(--spacing-sm);
-    color: #555;
+    color: var(--dark-text-secondary);
 }
 
 .feature-list li::before {
@@ -429,7 +442,7 @@ a {
 /* ===== Who This Is For Section ===== */
 .who-for {
     padding: var(--spacing-xxl) 0;
-    background-color: var(--startup-white);
+    background-color: var(--dark-bg-secondary);
 }
 
 .builder-grid {
@@ -441,6 +454,7 @@ a {
 
 .builder-card {
     padding: var(--spacing-lg);
+    background: var(--dark-card);
     border: 2px solid rgba(212, 165, 116, 0.3);
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -449,17 +463,17 @@ a {
 .builder-card:hover {
     border-color: var(--valletta-gold);
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(212, 165, 116, 0.2);
+    box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
 }
 
 .builder-card h3 {
-    color: var(--mediterranean-deep);
+    color: var(--startup-white);
     font-size: 24px;
     margin-bottom: var(--spacing-sm);
 }
 
 .builder-card p {
-    color: #555;
+    color: var(--dark-text-secondary);
 }
 
 /* ===== Island Effect Section ===== */
@@ -510,7 +524,7 @@ a {
 /* ===== Community Proof Section ===== */
 .community-proof {
     padding: var(--spacing-xxl) 0;
-    background-color: #f8f9fa;
+    background-color: var(--dark-bg);
 }
 
 .testimonial-grid {
@@ -521,16 +535,17 @@ a {
 }
 
 .testimonial-card {
-    background: var(--startup-white);
+    background: var(--dark-card);
     padding: var(--spacing-lg);
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(212, 165, 116, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonial-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(212, 165, 116, 0.2);
 }
 
 .testimonial-avatar {
@@ -541,19 +556,19 @@ a {
 }
 
 .testimonial-text {
-    color: #555;
+    color: var(--dark-text-secondary);
     font-style: italic;
     margin-bottom: var(--spacing-md);
 }
 
 .testimonial-author strong {
     display: block;
-    color: var(--mediterranean-deep);
+    color: var(--startup-white);
     margin-bottom: 4px;
 }
 
 .testimonial-author span {
-    color: #777;
+    color: var(--dark-text-secondary);
     font-size: 14px;
 }
 
@@ -561,25 +576,25 @@ a {
     text-align: center;
     margin-top: var(--spacing-lg);
     font-size: 20px;
-    color: var(--mediterranean-deep);
+    color: var(--startup-white);
 }
 
 /* ===== Media Gallery Section ===== */
 .media-gallery {
     padding: var(--spacing-xxl) 0;
-    background-color: var(--startup-white);
+    background-color: var(--dark-bg-secondary);
 }
 
 .media-gallery h2 {
     text-align: center;
-    color: var(--mediterranean-deep);
+    color: var(--startup-white);
     margin-bottom: var(--spacing-md);
 }
 
 .gallery-subtitle {
     text-align: center;
     font-size: 20px;
-    color: #666;
+    color: var(--dark-text-secondary);
     margin-bottom: var(--spacing-xl);
 }
 
@@ -594,7 +609,7 @@ a {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    background: #f5f5f5;
+    background: var(--dark-card);
     aspect-ratio: 1;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -639,7 +654,7 @@ a {
 /* ===== Ready to Launch Section ===== */
 .ready-launch {
     padding: var(--spacing-xxl) 0;
-    background-color: #f8f9fa;
+    background-color: var(--dark-bg);
     text-align: center;
 }
 
@@ -653,12 +668,12 @@ a {
 }
 
 .cta-section h3 {
-    color: var(--mediterranean-deep);
+    color: var(--startup-white);
     margin-bottom: var(--spacing-sm);
 }
 
 .cta-subtext {
-    color: #555;
+    color: var(--dark-text-secondary);
     margin-bottom: var(--spacing-lg);
 }
 
@@ -670,7 +685,7 @@ a {
 }
 
 .secondary-links a {
-    color: var(--mediterranean-deep);
+    color: var(--dark-text);
     text-decoration: underline;
     font-size: 16px;
 }
