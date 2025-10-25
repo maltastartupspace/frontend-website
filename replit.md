@@ -70,11 +70,11 @@ Configured for autoscale deployment with http-server serving static files.
   - Set up deployment configuration
 
 ## Authentication System
-- Users must login before accessing WhatsApp join link
-- Login collects: Name, Email, Company (optional), Website (optional)
+- Users must submit their details before accessing WhatsApp join link
+- Form collects: Name, Email, Company (optional), Website (optional)
 - User data stored in PostgreSQL database
-- Session-based authentication with 30-day cookie lifetime
-- Protected `/join` page shows WhatsApp link only to authenticated users
+- Session-based tracking with 30-day cookie lifetime
+- Protected `/join` page shows WhatsApp link only after form submission
 
 ### WhatsApp Community:
 - **Link**: https://chat.whatsapp.com/HSgdX3T1jH4AIhuoo9VrVb
@@ -87,8 +87,8 @@ Configured for autoscale deployment with http-server serving static files.
 - **LinkedIn**: https://www.linkedin.com/company/maltastartupspace
 
 ## Notes
-- All "Join WhatsApp" buttons redirect to login page
+- All "Join WhatsApp" buttons redirect to the details collection form
 - User data is securely stored in PostgreSQL
-- Passwords are hashed with bcrypt
-- Returning users can login with their existing credentials
+- No passwords required - simple one-step form
+- Returning users can resubmit to update their information
 - WhatsApp link is configured in server.js (line 188)

@@ -68,7 +68,6 @@ async function initDatabase() {
         name VARCHAR(255) NOT NULL,
         company VARCHAR(255),
         website VARCHAR(255),
-        password_hash VARCHAR(255) NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       );
     `);
@@ -99,17 +98,17 @@ app.get('/api/auth/status', (req, res) => {
   }
 });
 
-// Register/Login endpoint
-app.post('/api/auth/login', async (req, res) => {
+// Submit user details endpoint
+app.post('/api/auth/submit', async (req, res) => {
   try {
-    const { email, name, company, website, password } = req.body;
+    const { email, name, company, website } = req.body;
 
     // Validate required fields
-    if (!email || !name || !password) {
-      return res.status(400).json({ error: 'Email, name, and password are required' });
+    if (!email || !name) {
+      return res.status(400).json({ error: 'Email and name are required' });
     }
 
-    // Check if user exists
+    // Check if user already submitted
     const existingUser = await pool.query(
       'SELECT * FROM users WHERE email = $1',
       [email.toLowerCase()]
@@ -118,21 +117,19 @@ app.post('/api/auth/login', async (req, res) => {
     let userId;
 
     if (existingUser.rows.length > 0) {
-      // User exists - verify password
-      const user = existingUser.rows[0];
-      const validPassword = await bcrypt.compare(password, user.password_hash);
+      // User already exists - use existing ID
+      userId = existingUser.rows[0].id;
       
-      if (!validPassword) {
-        return res.status(401).json({ error: 'Invalid password' });
-      }
-      
-      userId = user.id;
+      // Update their information if provided
+      await pool.query(
+        'UPDATE users SET name = $1, company = $2, website = $3 WHERE id = $4',
+        [name, company || null, website || null, userId]
+      );
     } else {
-      // New user - create account
-      const hashedPassword = await bcrypt.hash(password, 10);
+      // New user - create record
       const result = await pool.query(
-        'INSERT INTO users (email, name, company, website, password_hash) VALUES ($1, $2, $3, $4, $5) RETURNING id',
-        [email.toLowerCase(), name, company || null, website || null, hashedPassword]
+        'INSERT INTO users (email, name, company, website) VALUES ($1, $2, $3, $4) RETURNING id',
+        [email.toLowerCase(), name, company || null, website || null]
       );
       userId = result.rows[0].id;
     }
@@ -140,14 +137,15 @@ app.post('/api/auth/login', async (req, res) => {
     // Set session
     req.session.userId = userId;
     req.session.userEmail = email;
+    req.session.userName = name;
 
     res.json({ 
       success: true, 
-      message: existingUser.rows.length > 0 ? 'Logged in successfully' : 'Account created successfully'
+      message: 'Thank you! Redirecting to WhatsApp community...'
     });
   } catch (error) {
-    console.error('Login error:', error);
-    res.status(500).json({ error: 'An error occurred during login' });
+    console.error('Submit error:', error);
+    res.status(500).json({ error: 'An error occurred. Please try again.' });
   }
 });
 
