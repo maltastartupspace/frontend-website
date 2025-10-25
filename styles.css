@@ -288,7 +288,7 @@ a {
 }
 
 .stat-card {
-    background: rgba(10, 36, 99, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
     padding: var(--spacing-md);
     border-radius: 8px;
@@ -296,8 +296,8 @@ a {
     flex-direction: column;
     align-items: center;
     min-width: 150px;
-    border: 1px solid rgba(212, 165, 116, 0.3);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .stat-number {
