@@ -54,7 +54,14 @@ The frontend website for maltastartupspace.com - Malta's premier startup ecosyst
 Configured for autoscale deployment with http-server serving static files.
 
 ## Recent Changes
-- **2025-10-25**: Complete rebuild with brand guidelines
+- **2025-10-25**: Dark mode theme implementation
+  - Updated hero section with black overlay (70% opacity)
+  - Changed footer to pure black (#000000)
+  - Updated stat cards to sleek black with slate silver grey borders
+  - Converted Island Effect section to black overlay theme
+  - Added 2 community videos (converted from .mov to MP4 format)
+  - Installed ffmpeg for video processing
+  - Complete dark theme across all sections
   - Implemented 8-section layout with brand copy
   - Added visual identity system (colors, typography)
   - Created responsive design with mobile optimization
