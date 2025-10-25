@@ -3,47 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malta Startup Space</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Malta Startup Space | Mediterranean's Premier Founder Community</title>
+    <meta name="description" content="Join 1,000+ founders in Malta's most active startup community. Strategic EU location, regulatory expertise, and the ecosystem to scale from the Mediterranean to the world.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
             <div class="logo">Malta Startup Space</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Welcome to Malta Startup Space</h1>
-                <p>Empowering innovation and entrepreneurship in Malta</p>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#community" class="nav-link">Community</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#" class="nav-cta">Join WhatsApp</a>
             </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Us</h2>
-                <p>Malta Startup Space is a hub for entrepreneurs, innovators, and startups looking to grow and thrive in Malta.</p>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <p>Ready to start your journey? Contact us today.</p>
+    <!-- Mobile CTA (sticky on mobile) -->
+    <div class="mobile-cta">
+        <a href="#" class="mobile-cta-button">Join WhatsApp</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Launch from the Center</h1>
+            <p class="subheadline">Join 1,000+ founders building the Mediterranean's most connected startup ecosystem. From Malta to the world.</p>
+            <p class="hero-body">Malta Startup Space is where the online community meets physical infrastructure. Strategic location. Regulatory expertise. 300 days of sunshine. Your European launchpad awaits.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Join 1,000+ on WhatsApp</a>
+                <a href="#about" class="btn btn-secondary">Explore the Space</a>
             </div>
-        </section>
-    </main>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-number">1,000+</span>
+                    <span class="stat-label">Members</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">3h to 600M</span>
+                    <span class="stat-label">People</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">EU Hub</span>
+                    <span class="stat-label">Since 2018</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Malta Startup Space. All rights reserved.</p>
+    <!-- Malta Advantage Section -->
+    <section id="about" class="malta-advantage">
+        <div class="container">
+            <h2>Why Founders Choose Malta</h2>
+            <div class="advantage-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                            <path d="M12 2v3M12 19v3M22 12h-3M5 12H2" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Geographic Genius</h3>
+                    <p>Position yourself at the Mediterranean crossroads. Three hours to 600 million Europeans. English-speaking EU member. Your gateway, not your limit.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12l2 2 4-4M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Regulatory Intelligence</h3>
+                    <p>Navigate fintech, blockchain, and gaming with world-class regulatory frameworks. Malta's expertise becomes your competitive moat.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 2v6M12 14c3 0 6 1 6 4v2H6v-2c0-3 3-4 6-4z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Lifestyle Leverage</h3>
+                    <p>Recruit and retain talent with 300 sunny days, Mediterranean culture, and work-life integration. Build sustainably, not burnout.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community to Ecosystem Section -->
+    <section id="community" class="community-ecosystem">
+        <div class="container">
+            <h2>One Community, Two Spaces</h2>
+            <div class="two-column">
+                <div class="column">
+                    <h3>Online: Where It Started</h3>
+                    <p>Since 2018, Malta Startup Space has been the online home for Malta's tech entrepreneurs. Started by MITA, grown by founder Adrian Galea, our community connects founders, shares opportunities, and builds the ecosystem one conversation at a time.</p>
+                    <div class="feature-list">
+                        <h4>What happens online:</h4>
+                        <ul>
+                            <li>Daily founder discussions and support</li>
+                            <li>Job postings and collaboration opportunities</li>
+                            <li>Event announcements and ecosystem news</li>
+                            <li>Direct access to mentors and investors</li>
+                            <li>Real-time problem-solving with peers</li>
+                        </ul>
+                    </div>
+                    <div class="column-visual">
+                        <div class="placeholder-image online-visual">Active Community</div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Offline: Where We're Going</h3>
+                    <p>Now we're bringing that energy into the real world. Malta Startup Space (the physical location) will be the Mediterranean's premier startup hub—where online connections become in-person collaborations.</p>
+                    <div class="feature-list">
+                        <h4>Coming soon:</h4>
+                        <ul>
+                            <li>Dedicated coworking and private offices</li>
+                            <li>Event space for meetups and workshops</li>
+                            <li>Meeting rooms for pitches and strategy sessions</li>
+                            <li>A community that works, builds, and celebrates together</li>
+                            <li>The infrastructure to scale your vision</li>
+                        </ul>
+                    </div>
+                    <div class="column-visual">
+                        <div class="placeholder-image offline-visual">Physical Space</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <p>Be part of the story from day one. Join our community.</p>
+                <a href="#" class="btn btn-primary">Join on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who This Is For Section -->
+    <section class="who-for">
+        <div class="container">
+            <h2>Built for Builders</h2>
+            <div class="builder-grid">
+                <div class="builder-card">
+                    <h3>Early-Stage Founders</h3>
+                    <p>Testing your MVP? Malta's 500K population is your perfect validation market before scaling to Europe.</p>
+                </div>
+                <div class="builder-card">
+                    <h3>Scale-Ups</h3>
+                    <p>Ready to expand? Leverage Malta's regulatory frameworks and tax intelligence for strategic European growth.</p>
+                </div>
+                <div class="builder-card">
+                    <h3>Remote-First Teams</h3>
+                    <p>Need EU presence? Establish your legal base in a jurisdiction that understands digital business.</p>
+                </div>
+                <div class="builder-card">
+                    <h3>International Founders</h3>
+                    <p>Entering Europe? Join a community that's been navigating EU expansion since 2018.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Island Effect Section -->
+    <section class="island-effect">
+        <div class="container">
+            <h2>Small Market, Big Thinking</h2>
+            <p>Constraints breed innovation. Malta's size isn't a limitation—it's your testing ground. Master a small, sophisticated market with EU regulations, English-speaking customers, and international mindset. Then take what works to 600 million people.</p>
+            <p class="effect-tagline">This is the Island Effect: Where you learn to scale smart, not just fast.</p>
+        </div>
+    </section>
+
+    <!-- Community Proof Section -->
+    <section class="community-proof">
+        <div class="container">
+            <h2>Voices from the Ecosystem</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23D4A574'/%3E%3C/svg%3E" alt="Founder" class="testimonial-avatar">
+                    <p class="testimonial-text">"The Malta Startup Space community connected me with my co-founder. Six months later, we're scaling across Europe with insights from founders who've already done it."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Chen</strong>
+                        <span>TechBridge Solutions</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%230A2463'/%3E%3C/svg%3E" alt="Founder" class="testimonial-avatar">
+                    <p class="testimonial-text">"From regulatory guidance to investor introductions, this community has been instrumental in our Malta expansion. The network effect is real."</p>
+                    <div class="testimonial-author">
+                        <strong>Marco Rossi</strong>
+                        <span>FinFlow Systems</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23FF6B6B'/%3E%3C/svg%3E" alt="Founder" class="testimonial-avatar">
+                    <p class="testimonial-text">"What started as a WhatsApp message turned into a partnership. The community here doesn't just connect—it collaborates."</p>
+                    <div class="testimonial-author">
+                        <strong>Lisa Martinez</strong>
+                        <span>CloudNative Labs</span>
+                    </div>
+                </div>
+            </div>
+            <p class="testimonial-footer">Join 1,000+ founders building together</p>
+        </div>
+    </section>
+
+    <!-- Ready to Launch Section -->
+    <section id="contact" class="ready-launch">
+        <div class="container">
+            <h2>Your Next Move Starts Here</h2>
+            <p>Whether you're exploring Malta as your base or already here building, the community is where it starts. Join 1,000+ founders sharing insights, opportunities, and support.</p>
+            <div class="cta-section">
+                <div class="whatsapp-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                </div>
+                <h3>Join Malta Startup Space on WhatsApp</h3>
+                <p class="cta-subtext">1,000+ active members | Daily discussions | Real opportunities</p>
+                <a href="#" class="btn btn-primary btn-large">Join the Community</a>
+                <div class="secondary-links">
+                    <a href="#">Follow on Facebook</a>
+                    <a href="#">Connect on LinkedIn</a>
+                    <a href="mailto:contact@maltastartupspace.com">Email Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">Malta Startup Space</div>
+                    <p>Malta's startup ecosystem, online and soon offline. Building the Mediterranean's most connected founder community.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">WhatsApp Community</a></li>
+                        <li><a href="#">Facebook Group</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="mailto:contact@maltastartupspace.com">Email: contact@maltastartupspace.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Malta Startup Space | Managed by Adrian Galea | Proudly Maltese 🇲🇹</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
