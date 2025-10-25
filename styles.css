@@ -191,7 +191,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('hero-knight.png');
+    background-image: url('hero-knight.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -490,7 +490,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('event-indoor.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('event-indoor.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
