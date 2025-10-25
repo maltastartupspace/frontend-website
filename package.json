@@ -1,0 +1,15 @@
+{
+  "name": "malta-startup-space",
+  "version": "1.0.0",
+  "description": "The frontend website for maltastartupspace.com",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 5000 -a 0.0.0.0 -c-1"
+  },
+  "keywords": ["malta", "startup", "space"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
