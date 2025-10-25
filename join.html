@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join WhatsApp - Malta Startup Space</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .join-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            padding: 20px;
+        }
+
+        .join-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 16px;
+            padding: 48px;
+            max-width: 600px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .join-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .join-icon svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
+        }
+
+        .join-box h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #FDFBF7;
+            margin-bottom: 16px;
+        }
+
+        .join-box p {
+            color: rgba(253, 251, 247, 0.8);
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .welcome-message {
+            background: rgba(212, 165, 116, 0.1);
+            border: 1px solid rgba(212, 165, 116, 0.3);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 32px;
+            color: #D4A574;
+        }
+
+        .welcome-message strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            padding: 16px 48px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(37, 211, 102, 0.4);
+        }
+
+        .community-stats {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 24px;
+            font-weight: 700;
+            color: #D4A574;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: rgba(253, 251, 247, 0.6);
+        }
+
+        .logout-link {
+            margin-top: 32px;
+        }
+
+        .logout-link a {
+            color: rgba(253, 251, 247, 0.5);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .logout-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .join-box {
+                padding: 32px 24px;
+            }
+
+            .join-box h1 {
+                font-size: 26px;
+            }
+
+            .community-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="join-container">
+        <div class="join-box">
+            <div class="join-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+            </div>
+
+            <h1>Welcome to the Community!</h1>
+            
+            <div class="welcome-message" id="welcomeMessage">
+                <strong>🎉 You're all set, <span id="userName">there</span>!</strong>
+                Join 1,000+ founders in the Malta Startup Space WhatsApp community
+            </div>
+
+            <p>Click the button below to join our active WhatsApp community where founders share insights, opportunities, and support daily.</p>
+
+            <a href="#" id="whatsappLink" class="whatsapp-btn" target="_blank">
+                Join WhatsApp Community →
+            </a>
+
+            <div class="community-stats">
+                <div class="stat">
+                    <span class="stat-number">1,000+</span>
+                    <span class="stat-label">Active Members</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">Daily</span>
+                    <span class="stat-label">Discussions</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">Real</span>
+                    <span class="stat-label">Opportunities</span>
+                </div>
+            </div>
+
+            <div class="logout-link">
+                <a href="/" onclick="logout(event)">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check authentication on page load
+        async function checkAuth() {
+            try {
+                const userResponse = await fetch('/api/auth/user');
+                if (!userResponse.ok) {
+                    window.location.href = '/login.html';
+                    return;
+                }
+
+                const user = await userResponse.json();
+                document.getElementById('userName').textContent = user.name.split(' ')[0];
+
+                // Get WhatsApp link
+                const linkResponse = await fetch('/api/whatsapp-link');
+                if (linkResponse.ok) {
+                    const data = await linkResponse.json();
+                    document.getElementById('whatsappLink').href = data.link;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                window.location.href = '/login.html';
+            }
+        }
+
+        async function logout(e) {
+            e.preventDefault();
+            try {
+                await fetch('/api/auth/logout', { method: 'POST' });
+            } catch (error) {
+                console.error('Logout error:', error);
+            }
+            window.location.href = '/';
+        }
+
+        checkAuth();
+    </script>
+</body>
+</html>
