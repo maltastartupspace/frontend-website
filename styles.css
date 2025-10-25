@@ -115,14 +115,12 @@ a {
 }
 
 .logo {
-    display: inline-block;
-    height: 40px;
-}
-
-.logo img {
-    height: 100%;
-    width: auto;
-    display: block;
+    font-family: 'ITC Avant Garde Gothic', 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--startup-white);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .nav-menu {
@@ -709,16 +707,13 @@ a {
 }
 
 .footer-logo {
-    display: inline-block;
-    height: 35px;
+    font-family: 'ITC Avant Garde Gothic', 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--startup-white);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin-bottom: var(--spacing-md);
-}
-
-.footer-logo img {
-    height: 100%;
-    width: auto;
-    display: block;
-    filter: brightness(0) invert(1);
 }
 
 .footer-column h4 {
@@ -796,7 +791,7 @@ a {
     }
     
     .logo {
-        height: 35px;
+        font-size: 16px;
     }
     
     /* Mobile CTA */
