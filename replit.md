@@ -54,7 +54,7 @@ The frontend website for maltastartupspace.com - Malta's premier startup ecosyst
 Configured for autoscale deployment with Node.js Express server handling both static files and API endpoints.
 
 ## Recent Changes
-- **2025-10-25**: Dark mode theme implementation & production fixes
+- **2025-10-25**: Dark mode theme implementation, production fixes & image optimization
   - Updated hero section with black overlay (70% opacity)
   - Changed footer to pure black (#000000)
   - Updated stat cards to sleek black with slate silver grey borders
@@ -72,6 +72,7 @@ Configured for autoscale deployment with Node.js Express server handling both st
   - Added trust proxy setting for Replit deployment
   - Updated CORS configuration for production
   - Set secure cookies for production environment
+  - **Optimized all images to WebP format** - reduced total size from 28MB to 3.7MB (87% reduction!)
 
 ## Authentication System
 - Users must submit their details before accessing WhatsApp join link
