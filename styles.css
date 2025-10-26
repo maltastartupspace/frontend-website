@@ -223,9 +223,20 @@ a {
 }
 
 .subheadline {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: var(--spacing-md);
+    font-size: 28px;
+    margin: var(--spacing-sm) 0 var(--spacing-md);
+    color: var(--valletta-gold);
+    font-weight: 600;
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 22px;
+    margin: var(--spacing-sm) 0 var(--spacing-lg);
+    color: var(--startup-white);
+    font-weight: 300;
     opacity: 0.95;
 }
 
