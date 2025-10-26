@@ -1,10 +1,10 @@
 # Malta Startup Space - Frontend Website
 
 ## Overview
-The frontend website for maltastartupspace.com - Malta's premier startup ecosystem connecting 1,000+ founders online and soon offline. Built according to detailed brand guidelines with a focus on community engagement and WhatsApp conversion.
+The frontend website for maltastartupspace.com - Malta's premier startup ecosystem connecting 1,000+ founders online through regular meetups and events. Built according to detailed brand guidelines with a focus on community engagement and WhatsApp conversion.
 
 ## Brand Identity
-- **Core Message**: Malta Startup Space transforms an online community into a physical ecosystem where founders connect, build, and scale from the Mediterranean's strategic center
+- **Core Message**: Malta Startup Space is an online community where founders connect, build, and scale from the Mediterranean's strategic center through digital collaboration and regular in-person events
 - **Brand Promise**: Where Islands Become Ecosystems
 
 ## Technology Stack
@@ -29,7 +29,7 @@ The frontend website for maltastartupspace.com - Malta's premier startup ecosyst
 ## Page Structure
 1. **Hero Section** - "Launch from the Center" with stats
 2. **Malta Advantage** - 3 key benefits
-3. **Community to Ecosystem** - Online & offline spaces
+3. **Community to Ecosystem** - Online community & regular meetups
 4. **Built for Builders** - Target audience segments
 5. **Island Effect** - Strategic positioning
 6. **Community Proof** - Testimonials
