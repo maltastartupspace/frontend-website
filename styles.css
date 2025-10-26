@@ -722,11 +722,10 @@ a {
     animation: float-particle linear infinite;
 }
 
-.particle.rocket { animation-duration: 15s; }
-.particle.star { animation-duration: 20s; }
-.particle.lightning { animation-duration: 12s; }
-.particle.chart { animation-duration: 18s; }
-.particle.bulb { animation-duration: 16s; }
+.particle.rocket { 
+    animation-duration: 18s;
+    filter: drop-shadow(0 0 3px rgba(212, 165, 116, 0.5));
+}
 
 @keyframes float-particle {
     0% {
@@ -734,10 +733,10 @@ a {
         opacity: 0;
     }
     10% {
-        opacity: 0.4;
+        opacity: 0.3;
     }
     90% {
-        opacity: 0.4;
+        opacity: 0.3;
     }
     100% {
         transform: translateY(-100px) rotate(360deg);

@@ -69,25 +69,21 @@ const observer = new IntersectionObserver((entries) => {
 
 // Apply animations to elements
 document.addEventListener('DOMContentLoaded', () => {
-    // Particle Animation
+    // Particle Animation - Just rockets
     function createParticles() {
         const container = document.getElementById('particles');
         if (!container) return;
         
-        const icons = ['🚀', '⭐', '⚡', '📈', '💡'];
-        const classNames = ['rocket', 'star', 'lightning', 'chart', 'bulb'];
-        
-        // Create 15 particles
-        for (let i = 0; i < 15; i++) {
+        // Create 3 initial rockets
+        for (let i = 0; i < 3; i++) {
             setTimeout(() => {
                 const particle = document.createElement('div');
-                const iconIndex = Math.floor(Math.random() * icons.length);
                 
-                particle.className = `particle ${classNames[iconIndex]}`;
-                particle.textContent = icons[iconIndex];
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 15 + 's';
-                particle.style.fontSize = (15 + Math.random() * 15) + 'px';
+                particle.className = 'particle rocket';
+                particle.textContent = '🚀';
+                particle.style.left = (20 + Math.random() * 60) + '%'; // Keep rockets more centered
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.fontSize = (18 + Math.random() * 12) + 'px';
                 
                 container.appendChild(particle);
                 
@@ -95,26 +91,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     particle.remove();
                 }, 20000);
-            }, i * 1000); // Stagger particle creation
+            }, i * 3000); // Stagger particle creation
         }
         
-        // Create new particles periodically
+        // Create new rocket periodically
         setInterval(() => {
             const particle = document.createElement('div');
-            const iconIndex = Math.floor(Math.random() * icons.length);
             
-            particle.className = `particle ${classNames[iconIndex]}`;
-            particle.textContent = icons[iconIndex];
-            particle.style.left = Math.random() * 100 + '%';
+            particle.className = 'particle rocket';
+            particle.textContent = '🚀';
+            particle.style.left = (20 + Math.random() * 60) + '%';
             particle.style.animationDelay = '0s';
-            particle.style.fontSize = (15 + Math.random() * 15) + 'px';
+            particle.style.fontSize = (18 + Math.random() * 12) + 'px';
             
             container.appendChild(particle);
             
             setTimeout(() => {
                 particle.remove();
             }, 20000);
-        }, 2000);
+        }, 6000); // Less frequent - every 6 seconds
     }
     
     createParticles();
