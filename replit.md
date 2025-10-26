@@ -27,7 +27,7 @@ The frontend website for maltastartupspace.com - Malta's premier startup ecosyst
 - Responsive sizing with mobile optimization
 
 ## Page Structure
-1. **Hero Section** - "The Digital Knights Of Malta - Building the Bastions of Tomorrow" with stats
+1. **Hero Section** - "Welcoming Digital Knights To Malta - Building the Bastions of Tomorrow" with stats
 2. **Malta Advantage** - 3 key benefits
 3. **Community to Ecosystem** - Online community & regular meetups
 4. **Built for Builders** - Target audience segments
